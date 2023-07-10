@@ -4,7 +4,8 @@ import React, { useState } from 'react'
 export default function About() {
     const [myStyle, setmyStyle] = useState({
         color: 'black',
-        backgroundColor: 'white'
+        backgroundColor: 'white',
+        
 
     })
 
@@ -16,6 +17,7 @@ export default function About() {
                 {
                     color: 'white',
                     backgroundColor: 'black'
+                   
                 }
             )
             setText('Disable Dark Mode')
@@ -33,8 +35,10 @@ export default function About() {
         }
     }
 
+
+
     return (
-        <div className='Container' style={myStyle}>
+        <div className='Container' >
             <div className="accordion" id="accordionPanelsStayOpenExample" style={myStyle}>
                 <div className="accordion-item" style={myStyle}>
                     <h2 className="accordion-header" >
@@ -74,7 +78,7 @@ export default function About() {
                 </div>
             </div>
             <div>
-                <button className="btn btn-primary my-3 mx-2" onClick={changeColor}>{text}</button>
+                <button className="btn btn-primary my-3 mx-2" onClick={changeColor} style={myStyle}>{text}</button>
             </div>
         </div>
     )
