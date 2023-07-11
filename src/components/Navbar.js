@@ -5,12 +5,12 @@ export default function Navbar(props) {
   const toggleFillStyles = {
     
     backgroundColor: '#ccc', // Set your desired fill color here
-    transition: 'transform 0.4s'
+    transition: 'transform 0s'
   };
 
   const checkedToggleFillStyles = {
     ...toggleFillStyles,
-   transform: 'translateX(10%)',
+   //transform: 'translateX(10%)',
     backgroundColor: '#fffff', // Set your desired fill color when the toggle is checked
   };
   return (
@@ -29,8 +29,12 @@ export default function Navbar(props) {
               <a className="nav-link" href="/">About</a>
             </li>
           </ul>
-         
-          <div className={`form-check form-switch text-${props.mode==="light"?"dark":"light"}`}>
+          <div className={`form-check form-switch mx-2 text-${props.mode==="light"?"dark":"light"}`}>
+            <input className="form-check-input " type="checkbox"  role="switch" id="flexSwitchCheckDefault" onClick={props.blueMode}  style={props.mode === "light" ? toggleFillStyles : checkedToggleFillStyles} />
+            <label className="form-check-label" htmlFor="flexSwitchCheckDefault">Blue DarkMode</label>
+          </div>
+          
+          <div className={`form-check form-switch mx-2 text-${props.mode==="light"?"dark":"light"}`}>
             <input className="form-check-input " type="checkbox"  role="switch" id="flexSwitchCheckDefault" onClick={props.toogleMode}  style={props.mode === "light" ? toggleFillStyles : checkedToggleFillStyles} />
             <label className="form-check-label" htmlFor="flexSwitchCheckDefault">{props.text}</label>
           </div>
