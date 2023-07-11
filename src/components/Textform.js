@@ -33,7 +33,6 @@ export default function Textform(props) {
        
     }
 
-
     // this is use of useState hook.
     const [text, setText] = useState('');
     //this is use to set values to pragraph values when you click on button
