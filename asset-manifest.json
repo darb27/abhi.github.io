@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/abhi.github.io/static/css/main.abd64e84.css",
+    "main.js": "/abhi.github.io/static/js/main.1ef489a0.js",
+    "static/js/787.0edbcda9.chunk.js": "/abhi.github.io/static/js/787.0edbcda9.chunk.js",
+    "index.html": "/abhi.github.io/index.html",
+    "main.abd64e84.css.map": "/abhi.github.io/static/css/main.abd64e84.css.map",
+    "main.1ef489a0.js.map": "/abhi.github.io/static/js/main.1ef489a0.js.map",
+    "787.0edbcda9.chunk.js.map": "/abhi.github.io/static/js/787.0edbcda9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.abd64e84.css",
+    "static/js/main.1ef489a0.js"
+  ]
+}
