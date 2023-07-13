@@ -46,7 +46,7 @@ export default function Textform(props) {
 
     return (
         <>
-            <div className="container my-3 t" style={{ color: props.mode === "dark" ? "white" : "black" }} >
+            <div className="container my-3 mt-0" style={{ color: props.mode === "dark" ? "white" : "black" }} >
                 <h1> Text Summary</h1>
                 <p> {text.split(" ").filter(Boolean).length} word and {text.trim().length} characters</p>
                 <p> {0.008 * text.split(" ").filter(Boolean).length} Minutes To Read</p>
@@ -58,10 +58,10 @@ export default function Textform(props) {
 
                     <textarea className="form-control" id="myBox" style={{ backgroundColor: props.mode === "light" ? "white" : "#A7C0C6", color: props.mode === "dark" ? "white" : "black" }} onChange={handelOnChange} placeholder="Enter Text Here" rows="8"></textarea>
                 </div>
-                <button className="btn btn-primary " style={{backgroundColor:props.modeblue ==="dark"?"#263D42":"" ,borderColor:props.modeblue==="dark"?"#263D42":""}} onClick={handelOnClickButtonUpper}>Convert To Uppercase</button>
-                <button className="btn btn-primary mx-2" style={{backgroundColor:props.modeblue ==="dark"?"#263D42":"" ,borderColor:props.modeblue==="dark"?"#263D42":""}} onClick={handelOnClickButtonLower}>Convert To Lowercase</button>
-                <button className="btn btn-primary " style={{backgroundColor:props.modeblue ==="dark"?"#263D42":"" ,borderColor:props.modeblue==="dark"?"#263D42":""}} onClick={handelOnClickButtonFilterNumber}>Convert To Number</button>
-                <button className="btn btn-primary mx-2"style={{backgroundColor:props.modeblue ==="dark"?"#263D42":"" ,borderColor:props.modeblue==="dark"?"#263D42":""}}  onClick={handelOnClickButtonFilterString}>Convert To Stirng</button>
+                <button disabled={text.length===0} className="btn btn-primary mx-2 my-1" style={{backgroundColor:props.modeblue ==="dark"?"#263D42":"" ,borderColor:props.modeblue==="dark"?"#263D42":""}} onClick={handelOnClickButtonUpper}>Convert To Uppercase</button>
+                <button disabled={text.length===0}  className="btn btn-primary mx-2 my-1" style={{backgroundColor:props.modeblue ==="dark"?"#263D42":"" ,borderColor:props.modeblue==="dark"?"#263D42":""}} onClick={handelOnClickButtonLower}>Convert To Lowercase</button>
+                <button disabled={text.length===0} className="btn btn-primary mx-2 my-1" style={{backgroundColor:props.modeblue ==="dark"?"#263D42":"" ,borderColor:props.modeblue==="dark"?"#263D42":""}} onClick={handelOnClickButtonFilterNumber}>Convert To Number</button>
+                <button disabled={text.length===0} className="btn btn-primary mx-2 my-1"style={{backgroundColor:props.modeblue ==="dark"?"#263D42":"" ,borderColor:props.modeblue==="dark"?"#263D42":""}}  onClick={handelOnClickButtonFilterString}>Convert To Stirng</button>
             </div>
             <div className="container my-3" style={{ color: props.mode === "dark" ? "white" : "black" }}>
                 <h2>Summary</h2>
