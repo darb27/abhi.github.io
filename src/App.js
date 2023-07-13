@@ -76,7 +76,7 @@ function App() {
       <Router>
         <Navbar title="ReactApp" mode={mode} toogleMode={toogleMode} blueMode={blueMode} text={text} />
         <Alert alert={alert} />
-        <div className='container my-3'>
+        <div className='container'>
           <Routes>
             <Route exact path="/about" element={<About />}/>
             <Route exact path="/" element={<Textform heading="Enter Data To Analyze" mode={mode} modeblue={modeblue} showAlert={showAlert} />}/>
